@@ -9,26 +9,10 @@ filename = "task02a.txt"
 file = open(filename,'r')
 filename1 = "task02b.txt"
 file1 = open(filename1,'r')
-
 fileContents = file.read()
-fileContents1 = file1.read()
+sContents = fileContents.split('\n')
+num = sContents.count('')
+for i in range(num):
+    sContents.remove('')
+print(sContents)
 
-cContents = fileContents + fileContents1
-sContents = cContents.split('\n')
-Contents = sContents.remove("")
-
-print(Contents)
-
-"""
-pytry = [] 
-
-
-for i in sContents:
-    if (i**2 + (i+1)**2) == (i+3)**2:
-        pytry.append(i)
-        pytry.append(i+1)
-        pytry.append(i+2)
-        
-print(pytry)
-        
-"""
