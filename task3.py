@@ -13,16 +13,27 @@ subFile= []
 fileImport = 'task03.txt'
 fileRead = open(fileImport, 'r')
 file = fileRead.read()
-sFile = file.split('\n')
-
+sFile2 = file.split('\n')
+sFile=[]
+## convert all elements to int
+for i in sFile2:
+    if i != "":
+        sFile.append(int(i))
+    else:
+        sFile.append("")
 
 ## indexing and splitting file into subfiles on empty elements
 lastIndex = -1
 for i in range(len(sFile)):
     if sFile[i] == '':
-        subFile.append(sFile[lastIndex +1 : i ])
+        subFile.append(sFile[lastIndex +1 :  i ])
         lastIndex = i
-
-## find greatest sum
-greatestSum=0
+        
+## finding greatest sum and displaying
+greatestSum = 0
+for i in range(len(subFile)):
+    x = sum(subFile[i])
+    if x > greatestSum:
+        greatestSum = x
+print('the greatest sum in this set is >>', greatestSum)
 
