@@ -12,7 +12,24 @@ Create a function that reads the specific value for a specific level and an armo
 
 """
 
-def target(lvl,ac):
+filename = 'task04.txt'
+file = open(filename,"r")
+fileContents = file.read()
+sFile2 = fileContents.split('\n')
+sFile=[]
+## convert all elements to int
+for i in sFile2:
+    if i != "":
+        sFile.append(int(i))
+    else:
+        sFile.append("")
+
+
+print(sFile)
+
+
+
+'''def target(lvl,ac):
     return
 
 
@@ -22,4 +39,4 @@ def tests():
     assert target(13,-10) == 20
 
 if __name__=="__main__":
-    tests()
+    tests()'''
