@@ -12,42 +12,35 @@ Create a function that reads the specific value for a specific level and an armo
 
 """
 
-<<<<<<< Updated upstream
-filename = 'task04.txt'
-file = open(filename,"r")
-fileContents = file.read()
-sFile2 = fileContents.split('\n')
-=======
+
+
+
+
+
 
 fileImport = 'task04.txt'
 fileRead = open(fileImport, 'r')
 file = fileRead.read()
-sFile2 = file.split('\n')
->>>>>>> Stashed changes
-sFile=[]
-## convert all elements to int
-for i in sFile2:
-    if i != "":
-        sFile.append(int(i))
-    else:
-        sFile.append("")
+sFile = file.split('\n')
 
 
-<<<<<<< Updated upstream
+
+for i in range(len(sFile)):
+    sFile[i].split(' ')
+
+
+
 print(sFile)
 
 
 
-'''def target(lvl,ac):
-    return
-=======
 
 '''
 def target(lvl,ac):
     x = sFile[lvl][10-ac]
     print(x)
     return x
->>>>>>> Stashed changes
+
 
 
 def tests():
