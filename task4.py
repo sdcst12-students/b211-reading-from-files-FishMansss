@@ -26,6 +26,9 @@ sFile = []
 slices = []
 
 
+
+
+##converting contents to integers
 for i in range(len(sfile)):
     try:
         sFile.append(int(sfile[i]))
@@ -33,27 +36,22 @@ for i in range(len(sfile)):
         pass
 
 
-for i in range(0, len(sFile), 21):
-    slices.append(sFile[i:i + 21])
+##splitting list every 21 elements
+lastnum = 0
+for i in range(18):
+    slices.append(sFile[lastnum:lastnum+21])
+    lastnum += 21
 
 
-for i in range(len(slices)):
-    print(slices[i])
-    print('')
-
-
-
-
-
-
-'''
 def target(lvl,ac):
-    x = sfile[lvl][10-ac]
+    x = slices[lvl][10-ac]
     print(x)
     return x
+
+
 def tests():
     assert target(3,7) == 23
     assert target(9,-1) == 17
     assert target(13,-10) == 20
 if __name__=="__main__":
-    tests()'''
+    tests()

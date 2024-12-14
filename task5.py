@@ -13,3 +13,11 @@ Apple Inc.
 Enter stock symbol: YANG
 No matches
 """
+fileImport = 'task05.csv'
+fileRead = open(fileImport, 'r')
+file = fileRead.read()
+sfile = file.split('\n')
+'''sFile = []'''
+
+print(sfile)
+
